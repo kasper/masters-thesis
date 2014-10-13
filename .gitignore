@@ -1,0 +1,12 @@
+# OS X
+
+.DS_Store
+
+# Project
+
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
