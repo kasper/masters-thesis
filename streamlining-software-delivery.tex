@@ -76,9 +76,35 @@ My research method for this thesis was reviewing the current practises in litera
 
 Software development has changed notably in the past few decades. Going back, it was not until 1968, when the term software engineering was introduced by the NATO Science Committee~\cite{NR69}. By that time, it was considered that software development had drifted into a crisis, where a wider gap was forming between the objectives and end-results of software projects. Additionally, it was getting increasingly difficult to plan the cost of development. A collective effort was put in place to establish a more formalised method for software development — similar to traditional engineering. It was considered necessary that the foundation for delivering software should be more theoretical with laid principles and practises~\cite{NR69}. By 1969, the term software engineering had become well-established~\cite{BR70}.
 
-Software development processes began to form. Notably in 1970, Winston W. Royce published a paper that described a formal approach for sequentially developing a software based on previously used practises~\cite{Roy70}. It was only later named as the waterfall model~\cite{Boe88, LB03}. The process consists of seven stages that should be carried after the previous has been reviewed and verified. It begins by mapping the requirements for the entire software, then proceeding to designing the architecture, followed by implementing the plan, verifying the result is according to the set requirements, and finally maintaining the product~\cite{Roy70}. Each stage is planned and documented thoroughly. However, contrary to what has been referred, Royce presented the model as a flawed, non-working model~\cite{Roy70}. If any of the stages fail, serious reconsideration of the plan or implementation might be necessary. Therefore sequentially following the stages would not produce what was intended and inevitably previous stages would need to be revisited~\cite{Roy70}. Nevertheless, this was overlooked and the waterfall model became the dominant software development process for software standards in government and industry for the time-being~\cite{Boe88, LB03}.
+Software development processes began to form. Notably in 1970, Winston W. Royce published a paper that described a formal approach for sequentially developing a software based on previously used practises~\cite{Roy70}. See figure~\ref{figure:waterfall-model}. It was only later named as the waterfall model~\cite{Boe88, LB03}. The process consists of multiple stages that should be carried after the previous has been reviewed and verified. It begins by mapping the requirements for the entire software, then proceeding to designing the architecture, followed by implementing the plan, verifying the result is according to the set requirements, and finally maintaining the product~\cite{Roy70}. Each stage is planned and documented thoroughly. However, contrary to what has been referred, Royce presented the model as a flawed, non-working model~\cite{Roy70}. If any of the stages fail, serious reconsideration of the plan or implementation might be necessary. Therefore sequentially following the stages would not produce what was intended and inevitably previous stages would need to be revisited~\cite{Roy70}. Nevertheless, this was overlooked and the waterfall model became the dominant software development process for software standards in government and industry for the time-being~\cite{Boe88, LB03}.
 
-Waterfall-oriented models are considered heavy. The waterfall model has been criticised as too controlled and managed, documentation-oriented and over-incremental~\cite{Boe88, LB03}. More lightweight iterative processes were proposed as opponents for incremental software development in the later part of the nineteen hundreds~\cite{LB03}. In fact, early applications of iterative and incremental development dates as far back as the mid-1950s~\cite{LB03}. Fast-forward to 2001, when a group of software developers met to discuss new lightweight development principles. As the result of these discussions, a manifesto for Agile software development was published~\cite{BBB01a}. Four principles were proposed for Agile software development: focusing on individuals and interactions over processes and tools, focusing on working software over comprehensive documentation, focusing on customer collaboration over contract negotiation and responding to change over following a plan. The manifesto does not dismiss the value of the latter, but considers the former more valuable~\cite{BBB01a}. Iterative processes started to gain mainstream traction~\cite{LB03}. Software development was considered as an ongoing process, where a product should be build stage-by-stage or even feature-by-feature, iteratively going through the development stages. Instead of planning, designing and implementing the whole software incrementally, the software should be build iteratively by repeating all of these steps in shorter more manageable parts. Hence, any issue or miss-communication could be discovered early and fixed accordingly.
+\begin{figure}[h!]
+
+    \vspace{1cm}
+    \centering
+
+    \includegraphics{waterfall-model}
+
+    \caption{Waterfall model}
+    \label{figure:waterfall-model}
+
+    \vspace{1cm}
+
+\end{figure}
+
+Waterfall-oriented models are considered heavy. The waterfall model has been criticised as too controlled and managed, documentation-oriented and over-incremental~\cite{Boe88, LB03}. More lightweight iterative processes were proposed as opponents for incremental software development in the later part of the nineteen hundreds~\cite{LB03}. In fact, early applications of iterative and incremental development dates as far back as the mid-1950s~\cite{LB03}. Fast-forward to 2001, when a group of software developers met to discuss new lightweight development principles. As the result of these discussions, a manifesto for Agile software development was published~\cite{BBB01a}. Four principles were proposed for Agile software development: focusing on individuals and interactions over processes and tools, focusing on working software over comprehensive documentation, focusing on customer collaboration over contract negotiation and responding to change over following a plan. The manifesto does not dismiss the value of the latter, but considers the former more valuable~\cite{BBB01a}. Iterative processes started to gain mainstream traction~\cite{LB03}. Software development was considered as an ongoing process, where a product should be build stage-by-stage or even feature-by-feature, iteratively going through the development stages. See figure~\ref{figure:iterative-development}. Instead of planning, designing and implementing the whole software incrementally, the software should be build iteratively by repeating all of these steps in shorter more manageable parts. Hence, any issue or miss-communication could be discovered early and fixed accordingly.
+
+\begin{figure}[h!]
+
+    \vspace{1cm}
+    \centering
+
+    \includegraphics{iterative-development}
+
+    \caption{Iterative development}
+    \label{figure:iterative-development}
+
+\end{figure}
 
 \subsection{Adapting to Requirements}
 
