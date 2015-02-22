@@ -142,7 +142,7 @@ At the low level, developers use source code management to keep track of changes
 
 Agile development only provides a framework for software delivery. It does not specify concretely how development should be organised. Most notably, Scrum and Extreme Programming (XP) have created a structure for Agile development~\cite{LB03, Fow05, SS10}. Scrum provides a framework for managing development. It focuses on how development should be planned, managed and scheduled. It does not provide any strict practises, instead it gives guidelines for how customer requirements should be discovered, prioritised, and how the development of these features is split into iterations.
 
-Scrum has been strengthened with practises such as test-driven development (TDD) and pair programming. These are defined in XP. In test-driven development, features are developed by writing the expectations for a feature as tests before actually implementing the code. In pair programming, developers develop features in pairs.
+Scrum has been strengthened with practises such as Continuous Integration, test-driven Development (TDD) and pair programming. These are defined in XP. In test-driven Development, features are developed by writing the expectations for a feature as tests before actually implementing the code. In pair programming, developers develop features in pairs.
 
 \subsection{From Agile to Lean}
 
@@ -164,7 +164,7 @@ As time has elapsed, developers have simplified software delivery even more. Agi
 
 \section{Deployment Pipeline}
 
-Anything that you can treat as construction should be automated~\cite{Fow05}.
+A deployment pipeline is the basis for many modern development practises. Anything that you can treat as construction should be automated~\cite{Fow05}.
 
 \subsection{Development}
 
@@ -172,7 +172,7 @@ Development.
 
 \subsection{Staging}
 
-Staging.
+The idea of a staging environment is to simulate the production environment. Test should be run under these controlled environment to make sure the software works as intended in the correct environment. By testing on multiple platform, you ensure the likelihood of the software working on an other environment. Of course it is not practical to test you code on every single platform.
 
 \subsection{Production}
 
@@ -182,15 +182,25 @@ Production.
 
 \section{Using Web as a Platform}
 
-Using Web as a platform.
+Using Web as a platform. IAAS, PAAS and SAAS.
 
 \subsection{Continuous Integration}
 
-There is nothing like a tested, integrated system for bringing a sense of reality into a project~\cite{Fow05}. Documentation can hide flaws that have not yet been discovered. Even more, untested code hide plenty of flaws. Test-driven development consists of programmers writing tests as they write production code. The tests are integrated into a continuous integration and build process which in affect results in a stable platform for future development.
+Continuous Integration (CI) is a development practise where members of a team integrate their work frequently, usually multiple times a day~\cite{Fow06}. This leads to multiple integrations of the software every day. Each integration is verified by an automated build and test process to detect any errors as soon as possible. Less time is spent in trying to find bugs, because they are discovered quickly. Only if the source builds and tests without any error, can the overall build be considered good~\cite{Fow06}. If and when a developer breaks the build, it is their responsibility to fix and repeat until the shared state is functional. A feature is only considered done when the CI succeeds.
+
+The essence for CI is maintaining a controlled source code repository~\cite{Fow06}. Software projects involve a lot of files and manually keeping track of these is burdensome. Source code management allows developers to keep track of changes to the source code for the software and to collaborate with other team members. Everything you need to build the software should be in the repository. Any individual developer works only a few hours at time from this shared project state. After the work is done, the developer integrates their changes back into the repository.
+
+Integration is a way of communicating with the team. Frequent integrations let team members know about changes to the software. This eases any changes necessary in their work. Developers can also see if their work conflicts with an other team member. It also encourages developers the keep their work in as small chunks as possible. This significantly reduces the amount of integration problems by shortening the integration cycle and removing any unpredictability. Conflicts that stay undetected for weeks are hard to resolve~\cite{Fow06}.
+
+The integration process is run locally, but in addition the process should be ran on a separate automated integration machine~\cite{Fow06}. This is generally accomplished with a CI server. The build can be started manually, but most of the time this process is automated. A build is started automatically as soon as the developer integrates their work to the repository. This prevents any flaws that might not be discovered on a local environment. In this environment, the build should never stay failed for long.
+
+CI assumes a comprehensively automated test suite for the software. The tests are integrated into an integration and build process which in affect results in a stable platform for future development. An integrated system and well-tested software is key for bringing a sense of reality and progress into a project~\cite{Fow05}. Documentation can hide flaws that have not yet been discovered. Untested code can hide even more of flaws. Practises such as test-driven development enhance integration by introducing programmers into writing simultaneously tests as they write production code. In addition, writing tests before the implementation is a design practise. Of course, you cannot count test to find every single bug, but imperfect tests are better than no test at all~\cite{Fow06}. Project that use CI, tend to have dramatically less bugs~\cite{Fow06}.
+
+CI also provides a way of making the latest version of the software being always accessible. Other developers and customers can then demonstrate, explore and see what has changed since the previous version.
 
 \subsection{Continuous Deployment}
 
-Continuous Deployment.
+The web has enabled to possibility to deploy and explore web applications to a subset of users~\cite{Fow06}. This can then be used as factor in making decisions about where to proceed.
 
 \subsection{Continuous Experimentation}
 
