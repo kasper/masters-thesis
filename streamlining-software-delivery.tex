@@ -164,7 +164,9 @@ As time has elapsed, developers have simplified software delivery even more. Agi
 
 \section{Deployment Pipeline}
 
-A deployment pipeline is the basis for many modern development practises. Anything that you can treat as construction should be automated~\cite{Fow05}.
+A deployment pipeline is the basis for many modern development practises. Anything that you can treat as construction should be automated~\cite{Fow05}. One of the obstacles of a automated build and test environment is that you want to be able to build fast so that you can get fast feedback~\cite{Fow13b}. To ensure quality, you have a comprehensive set of tests for your code. Running these tests can take a long time. A deployment pipeline handles this by breaking up your build into multiple stages. Each stage increases trust that everything is working as expected.
+
+A deployment pipeline usually begins by building the software. The stages can be automated or require human interaction. In fact, they can also be executed in parallel to each other when possible. The pipeline runs the automated test, but can also include manual check that cannot be automated. Usually deploying the software to production is one of the final stages of a deployment pipeline. The purpose of a deployment pipeline is to detect any changes that will lead to issues in production~\cite{Fow13b}. In addition, it gives you visibility about changes in your development process.
 
 \subsection{Development}
 
