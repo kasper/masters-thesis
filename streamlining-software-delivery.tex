@@ -172,7 +172,21 @@ Iterations have turned into building single features at a time. Instead of build
 
 A deployment pipeline is the basis for many modern development practises. Anything that you can treat as construction should be automated~\cite{Fow05}. This was expensive back in the days, but is not an issue anymore~\cite{Roy70}. One of the obstacles of a automated build and test environment is that you want to be able to build fast so that you can get fast feedback~\cite{Fow13b}. To ensure quality, you have a comprehensive set of tests for your code. Running these tests can take a long time. A deployment pipeline handles this by breaking up your build into multiple stages. Each stage increases trust that everything is working as expected.
 
-The stages can be automated or require human interaction. In fact, they can also be executed in parallel to each other when possible. A deployment pipeline usually begins by building the software. The pipeline runs the automated tests, but can also include manual checks that cannot be automated. Usually deploying software to production is one of the final stages of a deployment pipeline. The purpose of a deployment pipeline is to detect any changes that will lead to issues in production~\cite{Fow13b}. In addition, it gives you visibility about changes in your development process.
+\begin{figure}[h!]
+
+    \vspace{1cm}
+    \centering
+
+    \includegraphics{figures/deployment-pipeline}
+
+    \caption{Deployment Pipeline}
+    \label{figure:deployment-pipeline}
+
+    \vspace{1cm}
+
+\end{figure}
+
+Usually the deployment pipeline consists of three stages: development, staging and production. See figure~\ref{figure:deployment-pipeline}. The stages can be automated or require human interaction. In fact, they can also be executed in parallel to each other when possible. A deployment pipeline usually begins by building the software. The pipeline runs the automated tests, but can also include manual checks that cannot be automated. Usually deploying software to production is one of the final stages of a deployment pipeline. The purpose of a deployment pipeline is to detect any changes that will lead to issues in production~\cite{Fow13b}. In addition, it gives you visibility about changes in your development process.
 
 \subsection{Development}
 
