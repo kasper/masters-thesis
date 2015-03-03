@@ -186,7 +186,21 @@ A deployment pipeline is the basis for many modern development practises. Anythi
 
 \end{figure}
 
-Usually the deployment pipeline consists of three stages: development, staging and production. See figure~\ref{figure:deployment-pipeline}. The stages can be automated or require human interaction. In fact, they can also be executed in parallel to each other when possible. A deployment pipeline usually begins by building the software. The pipeline runs the automated tests, but can also include manual checks that cannot be automated. Usually deploying software to production is one of the final stages of a deployment pipeline. The purpose of a deployment pipeline is to detect any changes that will lead to issues in production~\cite{Fow13b}. In addition, it gives you visibility about changes in your development process.
+Usually the deployment pipeline consists of three stages: development, staging and production. See figure~\ref{figure:deployment-pipeline}. The stages can be automated or require human interaction. In fact, they can also be executed in parallel to each other when possible. A deployment pipeline usually begins by building the software. The pipeline runs the automated tests, but can also include manual checks that cannot be automated. Usually deploying software to production is one of the final stages of a deployment pipeline. The purpose of a deployment pipeline is to detect any changes that will lead to issues in production~\cite{Fow13b}. In addition, it gives you visibility about changes in your development process. See figure~\ref{figure:deployment-pipeline-flow}.
+
+\begin{figure}[h!]
+
+    \vspace{1cm}
+    \centering
+
+    \makebox[\textwidth]{ \includegraphics{figures/deployment-pipeline-flow} }
+
+    \caption{Deployment Pipeline Flow}
+    \label{figure:deployment-pipeline-flow}
+
+    \vspace{1cm}
+
+\end{figure}
 
 \subsection{Development}
 
