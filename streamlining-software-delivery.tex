@@ -152,7 +152,7 @@ Extreme Programming practises have been more widely studied than Scrum and Lean~
 
 As time has elapsed, developers have simplified software delivery even more. Agile has turned into Lean. Being “lean” means reducing the amount of “waste” around software development. The principles for Lean development are: eliminating waste, amplifying learning, deciding as late as possible, delivering as fast as possible, empowering the team, building integrity in and seeing the whole~\cite{DD08}.
 
-Iterations have turned into building single features at a time. Instead of building a frame for a car, a development process should essentially start with building a bicycle first. To evaluate an idea, developers should begin by developing a minimum viable product to validate the implementation has value. Even Royce hinted on prototyping and later the spiral model integrated this as a concept~\cite{Roy70, Boe88}. Only a minimal effort should be put into place to specify the overall nature of the product. Being “adaptive” has transformed into quantitatively assessing what effects changes have. This build-measure-learn cycle has transformed how features are developed and validated. See figure~\ref{figure:build-measure-learn}.
+Iterations have turned into building single features at a time. Instead of building a frame for a car, a development process should essentially start with building a bicycle first. To evaluate an idea, developers should begin by developing a minimum viable product to validate the implementation has value. Even Royce hinted on prototyping and later the spiral model integrated this as a concept~\cite{Roy70, Boe88}. Only a minimal effort should be put into place to specify the overall nature of the product. Being “adaptive” has transformed into quantitatively assessing what effects changes have. This build-measure-learn cycle has transformed how features are developed and validated. See figure~\ref{figure:build-measure-learn}. Either you change you heading by pivoting or you persevere with the choice you have made.
 
 \begin{figure}[h!]
 
@@ -190,7 +190,7 @@ Production.
 
 \section{Using Web as a Platform}
 
-Using Web as a platform: IAAS, PAAS and SAAS.
+The acceleration on digital products and services means the web will become more and more irreplaceable for software-intensive products and services. Using Web as a platform: IAAS, PAAS and SAAS.
 
 \subsection{Continuous Integration}
 
@@ -216,7 +216,9 @@ The value of doing continuous deployments is that the current version of the sof
 
 \subsection{Continuous Experimentation}
 
-Continuous Experimentation.
+The world is never static, being able to figure out what works and what does not can mean the difference between being in on the top and becoming invisible~\cite{KLS09}. The web has provided a platform for easily establishing a causal relationship between changes and their influence on user-observed behaviour~\cite{KLS09}. In the simplest form of these controlled experimentations, users are randomly assigned to two different variants of a feature: a) the Control and b) the Treatment. The Control represent the existing version of the feature and the Treatment a new version being evaluated. This is also called A/B testing. Data is then collected with predetermined metrics from these experiments — metrics such as how the user behaves with the feature. From these results we can determine by statistical analysis which implementation is better, although not always why. Different implementations can have very unexpected results~\cite{KLS09}. Controlled experiments provide a methodology to reliably evaluate the value of ideas~\cite{KLS09}. By building a system for experimentation, the cost of testing and failure becomes small. This encourages innovation by doing experimentation. Failing fast and knowing when an idea is not great is essential in making course corrections and developing more successful ideas. When we fail fast, we can also make improvements more faster. Due to the distributed nature of the web, these experimentations can be done in the background. New versions of features can be deployed frequently without the user even noticing the changes. This provides an thriving environment for experimentation. Experimentation can be used to understand what the user wants. When an issues is discovered, the feature can be rollbacked promptly, sometimes even automatically.
+
+Continuous Experimentation (CE) is a development practise where you build an environment where you can continuously deploy new features and enhancements to the user~\cite{FGM14}. As a result, developers can continuously get direct feedback from the user by observing usage behaviour. This requires an environment where you automatically deploy new features, collect metrics from usage, analyse them and furthermore integrate the results into the development pipeline. Instead of heavy up-front testing, alerts and post-deployment fixing should be tried~\cite{FGM14}. Continuous Experimentation makes use of minimum viable products as the basis for an hypothesis and experiment. Choices are made by analysing the data gathered from this minimum implementation. The hypothesis is either supported by the data or not. It is necessary to base decisions on sound evidence rather than guesswork~\cite{FGM14}.
 
 % -- Towards Embedded Systems --
 
@@ -234,7 +236,7 @@ Using hardware as a platform.
 
 \subsection{Adapting for Deployment Pipeline}
 
-Adapting for deployment pipeline.
+A special test environment may be needed in environments where the implications of feature changes are broad and the customer may have reluctance towards experimenting with new features~\cite{FGM14}. Setting up an experimentation cycle can be rather challenging developing software that requires hardware. Longer release cycles with hardware and potential synchronisation problems between the development schedules is an issue~\cite{FMG14}. Certain life-critical environments, experimentation can be too expensive or undesirable by the stakeholders.
 
 % -- Cases from Embedded Settings --
 
