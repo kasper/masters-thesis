@@ -166,6 +166,8 @@ This mentality of continually innovating has become popular among software start
     \caption{Build-Measure-Learn Cycle}
     \label{figure:build-measure-learn}
 
+    \vspace{1cm}
+
 \end{figure}
 
 Lean emphasis doing work just-in-time, not too early and not too late. Instead of dealing with a lot of upfront design, just-in-time delivers a better paradigm~\cite{Pop02}. The principle is to structure processes so that they do nothing but add value and as fast as possible. This is accomplished by removing unnecessary waste and moving decision-making to the ground. Mass-production requires immensive amounts of work to create a process that does not directly add any value. This takes time. Time that is of the essence. Being lean means reducing this framework to the minimum and providing customers value with significantly fewer resources. As an example, Pierre Omidyar created eBay by responding to daily customer requests for improvements to the service~\cite{Pop02}. Many of these improvements where integrated overnight. Software development should focus on rapidly responding to identified needs.
@@ -178,7 +180,11 @@ Such as Agile development, Lean development is more or less a mindset. It emphas
 
 \section{Deployment Pipeline}
 
-A deployment pipeline is the basis for many modern development practises. Anything that you can treat as construction should be automated~\cite{Fow05}. This was expensive back in the days, but is not an issue anymore~\cite{Roy70}. One of the obstacles of a automated build and test environment is that you want to be able to build fast so that you can get fast feedback~\cite{Fow13b}. To ensure quality, you have a comprehensive set of tests for your code. Running these tests can take a long time. A deployment pipeline handles this by breaking up your build into multiple stages. Each stage increases trust that everything is working as expected.
+Someone thinks of a good idea, but how do we deliver it as quickly as possible~\cite{HF11}. In many software projects, releasing new features is a manually intensive process. This should not be the case. Releasing software also has a high risk of failure. Will the software work in its intended environment. A deployment pipeline is the basis for many modern development practises. Anything that you can treat as construction should be automated~\cite{Fow05}. This was expensive back in the days, but is not an issue anymore~\cite{Roy70}. One of the obstacles of a automated build and test environment is that you want to be able to build fast so that you can get fast feedback~\cite{Fow13b}. To ensure quality, you have a comprehensive set of tests for your code. Running these tests can take a long time. A deployment pipeline handles this by breaking up your build into multiple stages. Each stage increases trust that everything is working as expected.
+
+Humble and Farley describe three common antipatterns: deploying software manually, deploying to a production-like environment only after development is complete and manually managing production environments~\cite{HF11}. Most applications are complex to deploy and they involve many moving parts. This leaves them prone to human error. Deploying software manually is a fragile and time-consuming process. Ideally software should be able to be deployed by anyone with a push of a button. No hassle in finding out the steps to do so and automated ways in discovering if something has gone wrong. This is accomplished by creating scripts or tasks that build an production ready installer or deploy the software to the cloud. Something can still go wrong, this is why you first deploy your software to a production-like environment to make sure it works as expected. This increases you confidence that one the software is finally deployed to production the likelihood for issues is smaller. If this is part of your development process, you have amble time to discover these issues when they are still easy to fix. In addition, managing the production environments should be made as easy as possible. The application stack should be easy to maintain and all configurations should be a repository. You should be able to create you production environment precisely, preferably in an automated fashion. Virtualisation and service-oriented platforms can help you.
+
+The notion of a deployment pipeline is to provide automated and frequent releases of features. Any change in the software should trigger a feedback process. Features should be deployed quickly so that the developers receive feedback promptly and can act upon it. Features are done only when they are released~\cite{HF11}.
 
 \begin{figure}[h!]
 
@@ -194,19 +200,25 @@ A deployment pipeline is the basis for many modern development practises. Anythi
 
 \end{figure}
 
-Usually the deployment pipeline consists of three stages: development, staging and production. See figure~\ref{figure:deployment-pipeline}. The stages can be automated or require human interaction. In fact, they can also be executed in parallel to each other when possible. A deployment pipeline usually begins by building the software. The pipeline runs the automated tests, but can also include manual checks that cannot be automated. Usually deploying software to production is one of the final stages of a deployment pipeline. The purpose of a deployment pipeline is to detect any changes that will lead to issues in production~\cite{Fow13b}. In addition, it gives you visibility about changes in your development process.
+Usually a deployment pipeline consists of three stages: development, staging and production. See figure~\ref{figure:deployment-pipeline}. The stages can be automated or require human interaction. In fact, they can also be executed in parallel to each other when possible. A deployment pipeline usually begins by building the software. The pipeline runs the automated tests, but can also include manual checks that cannot be automated. Usually deploying software to production is one of the final stages of a deployment pipeline. The purpose of a deployment pipeline is to detect any changes that will lead to issues in production~\cite{Fow13b}. In addition, it gives you visibility about changes in your development process.
 
 \subsection{Development}
 
-Development.
+It all starts with a developer. Developers carry out ideas and turn them into code that makes a feature. Everything that is required to build an application should reside in a shared repository. This source code management keeps track of changes and makes it possible for multiple people to work on the same project. It also creates an invaluable history, where developers can go back in time and look through how the code has changed over time. This makes troubleshooting easier. A new developer should be able to pull a local copy of the repository and with minimal effort get the application building and running. It should only be required that the developer has to install the basic frameworks such as the programming language and related libraries to get going. Everything else should be in the repository. Building the application should be an automated process.
+
+A developer is encouraged to implement features in small chunks. Continuously integrating code is practise, not a tool~\cite{HF11}. Development practises require a degree of commitment and discipline from the team. Developers write the code, any related automated test cases for the new code and manually test that the feature is working as desired. Usually the developer also interacts with the actual software. Then the developer runs all the test cases for the project. Thus making sure that local changes have not broken something else in the application. After this, the work is integrated into the shared repository. In small chunks, multiple times a day. Integrating code most of all is about conveying information amongst the team. Other developers can swiftly see what has changed, test new features and make sure nothing conflicts with the work they are doing. This prevents any major integration troubles.
+
+A local development machine is local setting and developers are humans that make mistakes. A application can seemingly work correctly on a local environment, but this must be verified. Once the feature has been integrated into the repository, it is then immediately verified in a production-like setting. A server runs the scripts and task related to building and testing the application. Automated tests are run and any other checks are made to make sure the code is satisfactory. These can include anything from statically analysing the code to verifying the test coverage of the code. If anything fails, the developers should notice the issues relatively soon and fix them.
 
 \subsection{Staging}
 
-The idea of a staging environment is to simulate the production environment. Tests should be run under this controlled environment to make sure the software works as intended in the desired environment. By testing on multiple platforms, you ensure the likelihood of the software working also on an other environment. Of course, it is not practical to test you code on every single platform.
+Once a feature has been integrated and tested, it first deployed to a production-like staging environment. The idea of a staging environment is to simulate the production environment. Tests should be run under this controlled environment to make sure the software works as intended in the desired environment. By testing on multiple platforms, you ensure the likelihood of the software working also on an other environment. Of course, it is not practical to test you code on every single platform.
+
+It is not always practical or desired to deploy software straight to production. Staging software adds a secondary barrier to test the application. The customer can also see if the feature works as intended and any changes can still be made before deploying the final product to users.
 
 \subsection{Production}
 
-Production. See figure~\ref{figure:deployment-pipeline-flow}.
+Finally, the last step includes deploying the application to production. This is once a feature is considered to be finally done. See figure~\ref{figure:deployment-pipeline-flow} for the deployment pipeline flow.
 
 \begin{figure}[h!]
 
@@ -217,8 +229,6 @@ Production. See figure~\ref{figure:deployment-pipeline-flow}.
 
     \caption{Deployment Pipeline Flow}
     \label{figure:deployment-pipeline-flow}
-
-    \vspace{1cm}
 
 \end{figure}
 
@@ -248,7 +258,7 @@ Continuous Deployment (CD) is a development practise where you build software th
 
 You achieve Continuous Deployment by continuously integrating the features completed by the development team. Teams prioritise keeping software in a deployable state. Features are integrated, built and automatically tested to detect any issues. If no issues are raised, the software can then be deployed automatically to production. Furthermore, you use environments that closely resemble the production environment to first see how the software performs before finally deploying it to users. By making small changes, there is a lower risk of something going wrong. When this happens, it is likely that these issues will be easier to fix.
 
-The value of doing continuous deployments is that the current version of the software can be deployed at a moments notice without panic. Deploying software frequently gives a sense of believable progress, not just developers declaring features done~\cite{Fow13a}. This requires extensive automation throughout the deployment pipeline, but also a close and collaborative working relationship between everyone from developers to system specialists involved in the software delivery~\cite{Fow13a}. Lately this has been referred to as the “DevOps culture”~\cite{Fow13a}. Stakeholders can then test the system and the feedback cycle is short. A substantial risk in the effort of building something is whether or not it is useful to the user. The earlier you have the change of evaluating the value a feature, the quicker you get feedback on it. The web has enabled the possibility to deploy and explore web applications to a subset of users~\cite{Fow06, Fow13a}. This can then be used as factor in making decisions about where to proceed.
+The value of doing continuous deployments is that the current version of the software can be deployed at a moments notice without panic. Deploying software frequently gives a sense of believable progress, not just developers declaring features done~\cite{Fow13a}. This requires extensive automation throughout the deployment pipeline, but also a close and collaborative working relationship between everyone from developers to system specialists involved in the software delivery~\cite{Fow13a}. Lately this has been referred to as the “DevOps culture”~\cite{Fow13a}. In practise, developers should have also control on how software is hosted and this should not be primarily outsourced~\cite{HF11}. Stakeholders can then test the system and the feedback cycle is short. A substantial risk in the effort of building something is whether or not it is useful to the user. The earlier you have the change of evaluating the value a feature, the quicker you get feedback on it. The web has enabled the possibility to deploy and explore web applications to a subset of users~\cite{Fow06, Fow13a}. This can then be used as factor in making decisions about where to proceed.
 
 \subsection{Continuous Experimentation}
 
