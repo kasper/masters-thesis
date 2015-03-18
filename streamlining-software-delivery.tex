@@ -14,6 +14,9 @@
 \AtBeginDocument{\hypersetup{pdftitle = {\@title}, pdfauthor = {\@author}}}
 \makeatother
 
+% Break long URLs
+\def\UrlBreaks{\do\/\do-}
+
 % -- Language --
 
 \usepackage[fixlanguage]{babelbib}
@@ -260,7 +263,7 @@ Controlled experiments provide a methodology to reliably evaluate the value of i
 
 Continuous Experimentation is a development practise where you build an environment where you can continuously deploy new features and enhancements to the user~\cite{FGM14}. As a result, developers can continuously get direct feedback from the user by observing usage behaviour. This requires an environment where you automatically deploy new features, collect metrics from usage, analyse them and furthermore integrate the results into the development pipeline. Instead of heavy up-front testing, alerts and post-deployment fixing should be tried~\cite{FGM14}. When an issue is discovered, the feature can be rollbacked promptly, sometimes even automatically. The adoption of cloud computing has clearly shown a different approach to adding frequent and rigorous experimentation to the development process~\cite{Bos12}. Continuous Experimentation makes substantial use of minimum viable products as the basis for an hypothesis and experiment. Choices are made by analysing the data gathered from this minimal implementation. A hypothesis is either supported by the data or not. It is necessary to base decisions on sound evidence rather than guesswork~\cite{FGM14}. Controlling every aspect of development will not work, instead you need to sustain a culture where teams can move and innovate with the experimentation system~\cite{Rie11}.
 
-Indeed, the leading edge of Continuous Experimentation is even starting to favour experiments over predefined test cases. Instead of rigorously testing features beforehand, automatic analytics are run in production. Heuristics are used to immediately discovers issues and alert about their consequences. Continuous Experimentation has become popular companies building web-products such as Etsy and Twitter~\cite{McK12, New13, Rho14, Wan14}.
+Indeed, the leading edge of Continuous Experimentation is even starting to favour experiments over predefined test cases. Instead of rigorously testing features beforehand, automatic analytics are run in production. Heuristics are used to immediately discovers issues and alert about their consequences. Continuous Experimentation has become popular among companies building web-products such as Etsy, Facebook and Twitter~\cite{McK12, Boh13, New13, Rho14, Wan14}.
 
 \subsection{Using Web as a Platform}
 
@@ -311,6 +314,8 @@ New approaches such as electronic testing platforms like Arduino, 3D-printing an
 \subsection{Adapting for Deployment Pipeline}
 
 A special test environment may be needed in environments where the implications of feature changes are broad and the customer may have reluctance towards experimenting with new features~\cite{FGM14}. Setting up an experimentation cycle can be rather challenging for developing software that requires hardware. Longer release cycles with hardware and potential synchronisation problems between the development schedules is an issue~\cite{FGM14}. In certain life-critical environments, experimentation can just be too expensive or undesirable to achieve.
+
+Some are even pushing web design philosophies to native apps~\cite{Boh13}.
 
 % -- Cases from Embedded Settings --
 
