@@ -345,7 +345,21 @@ Testing is the cornerstone of embedded systems~\cite{RA03, OAB12, KRM13}. Bugs t
 
 The concept of running tests relentlessly on target platform is hard to accomplish. Performance and memory constraints often prevent installing and running all tests on the hardware at the same time. It also takes significantly longer than say in modern computers. Anyway, basic usage of Continuous Integration is not hard to achieve in embedded settings — especially when related to unit, integration and acceptance testing~\cite{RA03, KRM13}. As with “traditional” software development, automatic testing will help to identify failures in an early stage. It will also increase awareness on what effect each build has on the overall system.
 
-Organisations developing embedded systems are starting to seek for opportunities presented by Continuous Deployment~\cite{OAB12}. However, there is still a rather long leap for frequently delivering new features to users. Sometimes this is not even possible within internal processes. The need for both Continuous Integration and Deployment are well understood, but their implementation is unfortunately rather hard to accomplish without more deep changes. A key focus is for an organisation to develop a fully automated testing infrastructure to continuously verify development~\cite{OAB12}.
+Organisations developing embedded systems are starting to seek for opportunities presented by Continuous Deployment~\cite{OAB12}. However, there is still a rather long leap for frequently delivering new features to users. Sometimes this is not even possible within internal processes. The need for both Continuous Integration and Deployment are well understood, but their implementation is unfortunately rather hard to accomplish without more deep changes. A key focus is for an organisation to develop a fully automated testing infrastructure to continuously verify development~\cite{OAB12}. See figure~\ref{figure:towards-continuous-experimentation}.
+
+\begin{figure}[h!]
+
+    \vspace{1cm}
+    \centering
+
+    \makebox[\textwidth]{ \includegraphics{figures/towards-continuous-experimentation} }
+
+    \caption{Towards Continuous Experimentation~\cite{OAB12}}
+    \label{figure:towards-continuous-experimentation}
+
+    \vspace{1cm}
+
+\end{figure}
 
 Specific solutions are required to mitigate the restriction in scaling the deployment pipeline in embedded systems. A special test environment may be needed in environments where the implications of feature changes are broad and the customer may have reluctance towards experimenting with new features~\cite{FGM14}. Setting up an experimentation cycle can be rather challenging for developing software that requires hardware. Longer release cycles with hardware and potential synchronisation problems between the development schedules is an issue~\cite{FGM14}. An experimentation system can be used to direct research and development efforts~\cite{OAB12}.
 
