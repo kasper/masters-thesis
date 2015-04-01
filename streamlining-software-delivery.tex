@@ -460,19 +460,29 @@ From the industry, Airbus Defence and Space Oy works in the telecom-industry, GE
 
 \subsection{About the Process}
 
-About the process.
+According to the interviews, the notion of Agile and Lean principles and practises being suitable for development of embedded systems is primarily accepted~\cite{Koi15}. However what is obvious is that products are being developed from the point-of-view of the whole products instead of single features. The Waterfall model is still widely used~\cite{Koi15}. Even so, adopting Agile and Lean practises are on future roadmaps~\cite{Koi15}.
+
+For Airbus Defence and Space, principal releases can take up to 18 months~\cite{Koi15}. The process is split into separate development, staging and production stages. Airbus utilises some automatic practises in the development and production stages. Still currently, for some products there is no automatic processes. From an idea to production, the lead time is longer than this, typically 24 to 36 months. Single medium-sized features can be delivered in about six months. With the Waterfall model an idea must be presented during the development of the previous release to be accepted as an feature-candidate for screening in the next principal release. As per usual for the Waterfall model, a customer primarily does not participate on the development stage after the requirements have been frozen. Even so, if some requirement cannot be accomplished or is incompletely defined, the requirement is opened and the customer participates in the modification process. Developers and the customer can make change requests that can consist of new features, even late in the development process.
+
+At this moment, only one product has been developed entirely using iterative practises. This was a software product which had a single customer, but was large exceptionally complex. The client was able to define the product in stages and review the features after each iteration. The product was delivered in two years. Before this, the client used a year to go trough their internal acceptance process. The client was extremely satisfied with the results~\cite{Koi15}.
+
+Currently Koivulehto, does not consider iterative development can substantially expedite the development of single medium-sized features to production~\cite{Koi15}. However, he does acknowledge that Agile development likely has its benefits in reducing the amount of bugs in software, ensuring the product will really do what it was intended to do, and the product will be deployable as soon as it is complete. Especially discovering bugs before additional functionality is added is invaluable. Most of all, Agile development enables to deploy versions that are in development early on in test bed -environments used to test new functionalities. These versions can be much more stable than what can be achieved with the Waterfall model.
 
 \subsection{About Adapting to Change}
 
-About adapting to change.
+Nowadays powerful processors, either embedded in the systems or on separate computers, make it possible to do feature-driven development~\cite{Koi15}. Usually feature-driven development is not hindered by the hardware itself. Most hardwares enable remote deployments for at least the application-part of the system through networks. This has enabled flexibly upgrading systems with new features and fixing existing ones. Instead of technological limitations, the process is slowed by customer requirements. Customers have requirements related to acceptance testing and security. This is one reason why software updates can be delayed far into the future~\cite{Koi15}.
+
+Keeping hardware and software development in sync is relatively easy to accomplish since rarely a customer has new hardware requirements during development~\cite{Koi15}. Most value is ultimately provided by software features. Hardware dependant programming is required during hardware development to make hardware features accessible and tested. Partly this work is carried out by hardware architects, partly in co-operation with software architects~\cite{Koi15}. At the application level, the hardware is utilised trough specified application interfaces (API). In the telecom industry, the products consists of multiple tiers of interfaces. Abstracting hardware assist software development~\cite{Koi15}. API changes are avoided between development unless absolutely necessary.
 
 \subsection{About Experimentation}
 
-About experimentation.
+For Airbus Defence and Space, the problem with experimentation is very conservative customers~\cite{Koi15}. Proof-of-concept projects are conducted before starting large product development projects. These experiments provide valuable information whether a project is realisable and how. Key factors are features, schedule, investment costs and product costs~\cite{Koi15}. Many clients want to test new features throughly in their own test bed -environments. This takes time. Unfortunately, Koivulehto does not think that this clientele will allow for developers to experiment in their production settings. This also prevents for deploying features straight into production. Customers supervise and manage production environments tightly.
+
+Koivulehto states several factors that influence feature evaluation: research and development costs, effect on production cost, competitiveness, suitability for the architecture and company product strategy~\cite{Koi15}.
 
 \subsection{About Building Hardware for Software}
 
-About building hardware for software.
+Koivulehto hopes that instead of dedicated hardware, products would be implemented with more general-purpose platforms in the future~\cite{Koi15}. Cost effective, versatile and low-power microprocessor based platforms are essential. These platforms can be used for advanced software solutions in embedded systems. In addition, improving modularisation is central — from part suppliers to manufacturers and system integrators. A question to ask is what is the value of slightly different implementations for similar functionalities. Consumers require less dedicated hardware devices and services are moving to the web. One interesting particular is that the supply of sensors is increasing and that they are getting even more capable. More sophisticated sensors will evolve practises and make data gathering much easier and faster. Manufacturers should learn to take advantage of end-user field testing and usage observation. Platforms should provide this functionality straightforwardly, bug reporting and feedback should be easy to accomplish. Users tend to find bugs in hardware platforms, but rarely this information is relayed to developers. Even if organisation would have resources and be willing to amend these.
 
 % -- Conclusions --
 
