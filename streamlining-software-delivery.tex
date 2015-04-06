@@ -8,7 +8,7 @@
 \usepackage{microtype}
 \usepackage{amsfonts,amsmath,amssymb,amsthm,booktabs,color,enumitem,graphicx}
 \usepackage[pdftex,hidelinks]{hyperref}
-\usepackage{adjustbox}
+\usepackage{rotating}
 
 % Automatically set the PDF metadata fields
 \makeatletter
@@ -536,47 +536,75 @@ There are already new approaches such as electronic testing platforms, 3D-printi
 
 \clearpage
 
-\begin{table}[h!]
+\begin{sidewaystable}[h!]
 
-    \begin{adjustbox}{center}
+    \footnotesize
 
-        \footnotesize
+    \begin{tabular}{|p{2.5cm}|p{1.5cm}|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
 
-        \begin{tabular}{|p{2.5cm}|p{1.5cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+        \hline
 
-            \hline
+        \textbf{Case} & \textbf{Context} & \textbf{Process} & \textbf{Integration} & \textbf{Deployment} & \textbf{Experimentation} \\
 
-            \textbf{Case} & \textbf{Context} & \textbf{Process} & \textbf{Integration} & \textbf{Deployment} & \textbf{Experimentation} \\
+        \hline
 
-            \hline
+        Aerospace (Niklas Holsti) &
+        - avionics &
+        \parbox[t]{4cm}{- driven by hardware \\
+                        - V-model approach with iterative increments \\
+                        - objective to manage change \\
+                        - keeping on schedule and budget is tricky \\
+                        - software is subcontracted, customer dictates process \\
+                        - heavily regulated and standardised, considerable emphasis on documentation \\
+                        - requirement-driven, requirements are frozen early on \\
+                        - development takes several years \\
+                        - Agile and Lean development not used \\
+                        - A R\&D is utilised in the “system level” design phase} &
+        \parbox[t]{4cm}{- developers write unit tests with code \\
+                        - separate integration, acceptance and validation tests
+                        - validation tests written by separate developers (required by process) \\
+                        - peer reviewing and static code analysis used \\
+                        - practically no hardware to test during development \\
+                        - simulation used to test behaviour \\
+                        - verification and validation conducted by third parties \\
+                        - customer can run tests in the production environment} &
+        \parbox[t]{4cm}{- remote deployments possible and universally used \\
+                        - software might not be ready before launch \\
+                        - degradation and wear compensated with software \\
+                        - hardware practically locked after mission starts} &
+        \parbox[t]{4cm}{- customer drives change, developers cannot choose features \\
+                        - dealing with exact data \\
+                        - developers do not have necessary knowledge or access to experiment with hardware \\
+                        - software and hardware simulation is used to manage wide range of concerns \\
+                        - 3D-printing practises where used already 15 years ago} \\
 
-            Airbus Defence and Space Oy &
-            - telecom &
-            \parbox[t]{3cm}{- primarily Waterfall based \\
-                            - to this day, iterative development used in one software project \\
-                            - from idea to production takes two to three years, primary releases about one year, single features six months \\
-                            - Agile and Lean development possible \\
-                            - widely adopting iterative development is planned} &
-            \parbox[t]{3cm}{- some automation used in testing and staging, though not widely across products \\
-                            - customers use test bed environments} &
-            \parbox[t]{3cm}{- remote deployments possible \\
-                            - no hardware limitations \\
-                            - security concerns and acceptance-testing slow down} &
-            \parbox[t]{3cm}{- proof-of-concept experimentation in research and development \\
-                            - powerful processors enable feature-driven development \\
-                            - conservative customers \\
-                            - customers own, supervise and manage production environments tightly} \\
+        \hline
 
-            \hline
+        Airbus Defence and Space Oy &
+        - telecom &
+        \parbox[t]{4cm}{- primarily Waterfall based \\
+                        - to this day, iterative development used in one software project \\
+                        - from idea to production takes two to three years, primary releases about one year, single features six months \\
+                        - Agile and Lean development possible \\
+                        - widely adopting iterative development is planned} &
+        \parbox[t]{4cm}{- some automation used in testing and staging, though not widely across products \\
+                        - customers use test bed environments} &
+        \parbox[t]{4cm}{- remote deployments possible \\
+                        - no hardware limitations \\
+                        - security concerns and acceptance-testing slow down} &
+        \parbox[t]{4cm}{- proof-of-concept experimentation in research and development \\
+                        - powerful processors enable feature-driven development \\
+                        - conservative customers \\
+                        - customers own, supervise and manage production environments tightly} \\
 
-        \end{tabular}
+        \hline
 
-    \end{adjustbox}
+    \end{tabular}
 
     \caption{Summary of Interviews}
     \label{figure:summary-of-interviews}
 
-\end{table}
+\end{sidewaystable}
 
 \clearpage
 
