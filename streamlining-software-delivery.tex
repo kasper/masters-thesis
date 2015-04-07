@@ -8,7 +8,8 @@
 \usepackage{microtype}
 \usepackage{amsfonts,amsmath,amssymb,amsthm,booktabs,color,enumitem,graphicx}
 \usepackage[pdftex,hidelinks]{hyperref}
-\usepackage{rotating}
+\usepackage{lscape}
+\usepackage{longtable}
 
 % Automatically set the PDF metadata fields
 \makeatletter
@@ -534,19 +535,22 @@ There are already new approaches such as electronic testing platforms, 3D-printi
 
 % -- Summary of Interviews --
 
-\clearpage
-
-\begin{sidewaystable}[h!]
+\newgeometry{margin = 2cm, footskip = 0cm}
+\begin{landscape}
 
     \footnotesize
 
-    \begin{tabular}{|p{2.5cm}|p{1.5cm}|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+    \begin{longtable}{|p{2.5cm}|p{1.5cm}|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+
+        \caption{\label{figure:summary-of-interviews} Summary of Interviews} \\
 
         \hline
 
         \textbf{Case} & \textbf{Context} & \textbf{Process} & \textbf{Integration} & \textbf{Deployment} & \textbf{Experimentation} \\
 
         \hline
+
+        \endhead
 
         Aerospace (Niklas Holsti) &
         - avionics &
@@ -601,14 +605,19 @@ There are already new approaches such as electronic testing platforms, 3D-printi
 
         \hline
 
-    \end{tabular}
+        ETH Zürich, Institute for Dynamic Systems and Control &
+        - drones &
+        \parbox[t]{4cm}{} &
+        \parbox[t]{4cm}{} &
+        \parbox[t]{4cm}{} &
+        \parbox[t]{4cm}{} \\
 
-    \caption{Summary of Interviews}
-    \label{figure:summary-of-interviews}
+        \hline
 
-\end{sidewaystable}
+    \end{longtable}
 
-\clearpage
+\end{landscape}
+\restoregeometry
 
 % -- Conclusions --
 
