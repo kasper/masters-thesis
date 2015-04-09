@@ -29,9 +29,6 @@
 
 % -- tktltiki2 options --
 
-\setcounter{secnumdepth}{2}
-\setcounter{tocdepth}{2}
-
 \title{Advances in Streamlining Software Delivery on the Web and its Relations to Embedded Systems}
 \author{Kasper Hirvikoski}
 \date{\today}
@@ -466,15 +463,15 @@ These cases cover a wide range of sectors from telecom, medical, aerospace to ro
 
 Be that as it may be, what is obvious is that the embedded field is very diverse. Different sectors and organisations have very divergent practises and opinions. No objective conclusion can be made for the whole industry and these interviews should be considered as inciting discussion rather than giving truths.
 
-\subsection{About the Process}
+\subsection{About Processes}
 
 \epigraph{The Waterfall model has turned into a cliché that crumbles fast under inspection.}{\textit{Harri Holopainen~\cite{Hol15a}}}
 
-According to the interviews, the notion of Agile and Lean principles and practises being suitable for the development of embedded systems is primarily accepted~\cite{Hol15a, Koi15, Kri15}. Yet there are some industries, such as flight related embedded systems in aerospace, where generally Agile development is not used at all~\cite{Hol15b}. This partly contradicts the previous findings from literature, albeit this can be caused by different interpretations~\cite{LB03}.
+According to the interviews, the notion of Agile and Lean principles and practises being suitable for the development of embedded systems is primarily accepted~\cite{Hol15a, Koi15, Kri15, Pet15}. Yet there are some industries, such as flight related embedded systems in aerospace, where generally Agile development is not used at all~\cite{Hol15b}. This partly contradicts the previous findings from literature, albeit this can be caused by different interpretations~\cite{LB03}. In two cases, distinct Agile methodologies, such as Scrum, are used~\cite{BT15, Pet15}. One case has gone even further by adopting Lean principles as part of the organisational strategy~\cite{BT15}.
 
-It seems, a Waterfall-like model is still more or less a consensus and widely used among many interviewed embedded sectors~\cite{Hol15b, Koi15}. However, this does not prohibit the use of iterative and incremental development within the surrounding process~\cite{Hol15b}. Holopainen considers that the Waterfall-model has turned into a cliché that crumbles fast under inspection — the surrounding world is not linear~\cite{Hol15a}. In fact, iterative development is being used at least to some extent along plan-driven methodologies, something that can be considered iterative plan-driven development. As common, many of these plan-driven methods do not stay generally on schedule or budget, mostly because requirements are not set on time for software development to begin on time~\cite{Hol15b}. Holsti does not see the existing plan-driven processes to be of blame, but rather the reason lies in the inexperience of customers in underestimating the amount work necessary~\cite{Hol15b}. In two cases, distinct Agile methodologies, such as Scrum, are used~\cite{Pet15}. Yet, what is obvious among all interviews Agile or not, is that most embedded products are being developed from the point-of-view of the whole product instead of single features. Even so, a wide adoption of Agile and Lean principles and practises is planned in most of the interviewed organisation currently focused in plan-driven approaches~\cite{Koi15}.
+It seems, a Waterfall-like model is still more or less a consensus and widely used among many interviewed embedded sectors~\cite{Hol15b, Koi15}. However, this does not prohibit the use of iterative and incremental development within the surrounding process~\cite{Hol15b}. Holopainen considers that the Waterfall-model has turned into a cliché that crumbles fast under inspection — the surrounding world is not linear~\cite{Hol15a}. In fact, iterative development is being used at least to some extent along plan-driven methodologies, something that can be considered iterative plan-driven development. As common, many of these plan-driven methods do not stay generally on schedule or budget, mostly because requirements are not set on time for software development to begin on time~\cite{Hol15b}. Holsti does not see the existing plan-driven processes to be of blame, but rather the reason lies in the inexperience of customers in underestimating the amount work necessary~\cite{Hol15b}. Yet, what is obvious among all interviews Agile or not, is that most embedded products are being developed from the point-of-view of the whole product instead of single features. Even so, a wide adoption of Agile and Lean principles and practises is planned in most of the interviewed organisation currently focused in plan-driven approaches~\cite{Koi15}.
 
-What is obvious, is that the due to the very different environments, spotting distinct deployment pipeline practises is indeed hard. Each organisation uses different practises to deliver software to production. Software processes form under pressure from clients and environments~\cite{Hol15a, Hol15b}. Methodologies range from plan-driven methods such as the Waterfall and V-models to Agile and Lean implementations~\cite{Hol15b, Koi15}. In one case relating to the academia, no distinct process was used since the project was merely focused on experimentation~\cite{Kri15}. Some automatic deployment pipeline practises can be used in the development and production stages~\cite{Hol15a, Hol15b, Koi15, Pet15}. Most of these relate to using Continuous Integration practises, such as source control management, automated testing and static analysis of source code. Also social methods, such as peer reviewing are used~\cite{Hol15b}. Continuous Deployment is possible, but utilised to varying degrees~\cite{Hol15a, Hol15b, Koi15}. Yet currently, some modern deployment pipeline practises popular from modern web-development have no straight equivalent in the processes used to develop embedded systems.
+What is obvious, is that the due to the very different environments, spotting distinct deployment pipeline practises is indeed hard. Each organisation uses different practises to deliver software to production. Software processes form under pressure from clients and environments~\cite{Hol15a, Hol15b}. Methodologies range from plan-driven methods such as the Waterfall and V-models to Agile and Lean implementations~\cite{Hol15b, Koi15}. In one case relating to the academia, no distinct process was used since the project was merely focused on experimentation~\cite{Kri15}. Some automatic deployment pipeline practises can be used in the development and production stages~\cite{BT15, Hol15a, Hol15b, Koi15, Pet15}. Most of these relate to using Continuous Integration practises, such as source control management, automated testing and static analysis of source code. Also social methods, such as peer reviewing are used~\cite{Hol15b}. Continuous Deployment is possible, but utilised to varying degrees~\cite{Hol15a, Hol15b, Koi15}. Yet currently, some modern deployment pipeline practises popular from modern web-development have no straight equivalent in the processes used to develop embedded systems.
 
 Where Agile methods are suitable, work is driven by customer and end-user needs — as well as views on future needs~\cite{Pet15}. In the case of Space Systems Finland Ltd, a typical lifecycle of a feature is: recorded, prioritised, assigned to a “work package” (sprint) and finally implemented with unit and acceptance tests and released. Corresponding knowledge on how Agile development is organised. Hardware development follows the similar stages and this can be accomplished due to extendable platforms. So far Petkovic mentions they have been able to develop hardware iteratively without significant troubles~\cite{Pet15}. According to Petkovic, the most significant Agile and Lean principles are those emphasising customer collaboration and flexible planning. The development follows short iterations varying from a few weeks to several months depending on the features priority which is decided by the (end-)customers needs. The overall process follows Agile and Scrum, but not fully~\cite{Pet15}. Progress meetings are held weekly, not daily. Although emphasis is still on communicating and exchanging ideas daily whenever necessary. A customer is involved even daily, usually weekly. Relating end-users, the feedback-cycle varies on the urgency — anything from daily to a few months.
 
@@ -482,7 +479,7 @@ When reflecting on hardware development, Koivulehto considers the processes are 
 
 According to Holopainen, iterative and incremental development is the only way to do development if the definition and requirements of what you are trying to accomplish are missing~\cite{Hol15a}. In every project, the essential problem is to determine the requirements. An increasing amount of customers understand the problem, but phrasing desires remains a problem. Agile development suits a context where the problem can be split into sections. Relating to web-development, many of the existing problems have been solved many times. Web-development is an ideal context for Agile development. A short feedback-cycle is an immense resource. Iterating is supported by data that can even be used to analyse what features bring most value. Unfortunately, Agile development is way ahead of how embedded systems are developed. Regardless, as such the bad attributes of the a context are not a fault of Agile development or a reason to not utilise it.
 
-\subsubsection{A Stringent Context}
+\subsection{A Stringent Context}
 
 As a stringent example, the aerospace industry takes great lengths to supervise and manage change — evidently a reason why plan-driven methodologies such as Waterfall and V-models are being extensively used~\cite{Hol15b}. One simply cannot experiment with launching a satellite to space with flimsy approaches. Controlling change is a significant part of software projects in this critical industry. The industry is regulated and the quality of software projects is evaluated throughout the process with standardised processes. Typically, these plan-driven methods are not however linear. Not all requirements can be determined up front and iteration is needed throughout the process. Single teams and developers can work with even short iterations implementing features. What is key though, this iteration is handled within Waterfall-like processes. Therefor the V-model is generally used, since it focuses on a process where gradually refined requirements are accompanied by gradually increasing validation, enabling the use of some iteration. Requirements and software implementing these is delivered incrementally, part by part. The whole process can take up to several years. Hardware and software development are highly separated and embedded systems are being developed by subcontracting software for specific components of space equipment.
 
@@ -496,7 +493,7 @@ Developing embedded systems takes relative long. For aerospace projects this tak
 
 Currently Koivulehto, does not consider iterative development can substantially expedite the development of single features to production for Airbus~\cite{Koi15}. However, he does acknowledge that Agile development has its benefits in reducing the amount of bugs in software, ensuring the product will really do what it was intended to do, and the product will be deployable as soon as it is complete. Discovering bugs before additional functionality is added is especially beneficial. Most of all, Agile development enables to deploy development versions early in test bed -environments used to trial new functionalities. These versions can be much more stable than what can be achieved with traditional sequential development.
 
-\subsubsection{Variables Hard to Understand}
+\subsection{Variables Hard to Understand}
 
 Even if regulatory restriction are not an significant issue, the context can still be tricky. ZenRobotics is working on waste sorting robots~\cite{Hol15a}. Clearly, robotics have their own safety-concerns, but these are more manageable. These industrial robots recycle waste, primarily chunks of wood, metal, concrete and plastic moving on a conveyer belt, and sort them according to their material. Typically this kind of material consists of demolition waste, the pieces are different shapes, sizes and weights. Currently, ZenRobotics has a robotic waste sorting line in SITA’s (SUEZ environnement) recycling facilities in Helsinki~\cite{Hol15a, SITA}. This production environment represent their customer. The work is done in the sector of the client. Again, the only identifiable customer is the facility. What is notable, is that ZenRobotics has direct access to the client’s production environment.
 
@@ -508,7 +505,7 @@ Many of these previously mentioned issues are solved by software solutions~\cite
 
 Web-applications can collect exact performance and behavioural data. Collecting data about how an embedded system consisting of robots consists of using cameras and above all using people to observe behaviour~\cite{Hol15a}. People need to be used to know how well the system has performed. For instance, if we need to estimate how well the robots have sorted wood, human interaction is needed to physically go on-site, run and measure the system and finally manually go trough the sorted material and evaluate whether the robots is behaving as expected. A customer can practically only give feedback on whether the system is working at a high-level. Improving the system cannot be accomplished by simple modifications that are remotely deployed to production. A short feedback-cycle can require hours of labour intensive physical work. An impression of how something works is not always valuable. An engineer and developer can see different problems and solutions. Some problems can be fixed by hardware modification, some by software. Some fixes can work on a certain day, but not on another. Even software developer have to understand the problems, to have enough knowledge to do software development. Cross-functional teams are beneficial, but not always as simple to achieve as considered. Holopainen is afraid that Agile development does not really solve this problem caused by variables hard to understand, even an organisation level~\cite{Hol15a}.
 
-\subsubsection{Comparing to Agile and Lean}
+\subsection{Comparing to Agile and Lean}
 
 According to Holsti, many of the concepts in developing embedded systems in stringent contexts are the complete opposite of what is regarded as valuable in Agile principles~\cite{Hol15b}. \emph{Processes and tools} bring more predictability and repeatability to critical contexts than focusing on individuals or interactions. \emph{Comprehensive documentation} is seen as the only way for customers to verify the software works and all its requirements and validations have been met. This can require documentation that can be anything from hundreds to thousands of pages long. Customers are reluctant to repeat tests and instead rely on documented assurances. A typical avionics software can contain up to five hundred requirements and at least the same amount of validation tests. These acceptance tests are written by separate people, required by the process. The sequential approach of subcontracting software for embedded systems evidently leads to \emph{contract negotiation} instead of customer collaboration, although customers are still a valuable part of the process. Even though managing change is central, changes are still unavoidable and producers must be prepared to respond to change. So \emph{responding to change} is still a challenge.
 
@@ -516,7 +513,11 @@ Regarding Lean principles, according to Holsti formal procedures in for example 
 
 Being lean in embedded system development is primarily about minimising the risks and resource relating to hardware development~\cite{Hol15a}. Engineers often have an urge to develop own implementation instead of relying on existing ones. To get around the problems presented by hardware, smart software solution can be used. In practise, changing hardware is simply too expensive and software development must give way.
 
-\subsection{About Adapting to Change}
+\subsection{Pursuing New Ideologies}
+
+Of all the cases, GE Healthcare Finland Oy leads by far with the adoption of new ideologies presented by Agile and Lean development~\cite{BT15}.
+
+\subsection{Adapting to Change}
 
 In general, it is not difficult to adopt hardware changes in software, because the best practise is to abstract as much of the hardware as possible. New hardware usually only requires a new driver to be adopted and the characteristics of the hardware to be accounted in software. Most high-level algorithms should not be affected by this. Typical software level approaches to prepare for changes include building modular software components and abstracting data processing and computing~\cite{Hol15b, Koi15, Kri15}. It is extremely rare that software development can change the existing hardware. Quite the contrary, software must circumvent many obstacles set by hardware. In some cases, software developer can however find flaws that prevent implementing software feature reliably for hardware~\cite{Hol15b}.
 
@@ -534,7 +535,7 @@ Holsti explains that in the aerospace industry value is not delivered by experim
 
 For Airbus, keeping hardware and software development in sync is relatively easy to accomplish since rarely a customer has new hardware requirements during development~\cite{Koi15}. Most value is ultimately provided by software features. Hardware dependant programming is required during hardware development to make hardware features accessible and tested. Partly this work is carried out by hardware architects, partly in co-operation with software architects~\cite{Koi15}. At the application level, the hardware is utilised trough specified application interfaces (API). In the telecom-industry, the products consists of multiple tiers of interfaces. Abstracting hardware assist software development~\cite{Koi15}. API changes are avoided between development unless absolutely necessary.
 
-\subsection{About Experimentation}
+\subsection{Experimenting}
 
 Experimentation with software is convenient~\cite{Hol15a}. If an approach fails, another one can be used with relative ease. Even a complex software can be rebuild when needed. This is largely even accepted as a norm. Clearly, for some developing embedded systems is experiment driven by nature~\cite{Hol15a, Kri15}. Working on an unpredictable and new field requires iteration.
 
@@ -552,7 +553,7 @@ For Airbus, the problem with experimentation is very conservative customers~\cit
 
 Koivulehto states several factors that influence feature evaluation in the telecom-industry: research and development costs, effect on production cost, competitiveness, suitability for the architecture and company product strategy~\cite{Koi15}. Holsti emphasis that typically in subcontracting, developers do not have a chance in evaluating features~\cite{Hol15b}. At most, software developers can negotiate on for instance software performance and data related factors. Cost-benefit evaluation is done primarily during system level development, well before software is part of the picture. For Kriegleder, feature value is brought by experimentation interest~\cite{Kri15}.
 
-\subsection{About Building Hardware for Software}
+\subsection{Building Hardware for Software}
 
 \epigraph{A right question to ask is, whether you are actually building software for hardware or hardware for software.}{\textit{Stefan Baggström~\cite{BT15}}}
 
@@ -572,7 +573,7 @@ Consumers require less dedicated hardware devices and evidently services are mov
 
 There are already new approaches such as electronic testing platforms, 3D-printing and laser-cutting that are seen as a beneficial aid for experimenting with hardware~\cite{Kri15}. Many of these have been around for many years, but only now are starting to be viable for cost-effective experimentation. Essentially, hardware development can be effortlessly moved in-house with software development. Engineers and developers can do most of the early prototyping and evaluation of design choices internally~\cite{Kri15}. If prototypes are produced in low quantities, practises such as 3D-printing and laser-cutting are in fact a necessary requirement in terms of cost. Kriegleder describes how they can utilise off-the-shelf electronics for drones and extend them relatively easily with custom electronics to enable full control over the hardware and its on-board software~\cite{Kri15}. For the Distributed Flight Array, the whole embedded system is fully developed in house including all mechanics, electronics and software.
 
-\subsection{Summary}
+\subsection{Overview about Cases}
 
 See table~\ref{table:summary-of-interviews} for summary of the interviews.
 
@@ -669,6 +670,15 @@ See table~\ref{table:summary-of-interviews} for summary of the interviews.
                         - off-the-shelf platforms \\
                         - in-house mechanics, electronics and software \\
                         - 3D-printing and laser-cutting necessary for low quantity development} \\
+
+        \hline
+
+        GE Healthcare Finland Oy &
+        \parbox[t]{1.5cm}{- health-care} &
+        \parbox[t]{4cm}{} &
+        \parbox[t]{4cm}{} &
+        \parbox[t]{4cm}{} &
+        \parbox[t]{4cm}{} \\
 
         \hline
 
